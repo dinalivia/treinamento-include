@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppInicial.Detalhe"
+            Title="Detalhe">
+    <TabbedPage.Children>
+        <ContentPage Title="Item">
+            <StackLayout Margin="10">
+                <Label Text="Nome do item:"
+                       FontSize="Large"/>
+                <Label x:Name="nomeItem"/>
+                <Label Text="Descrição do item:"
+                       FontSize="Large"/>
+                <Label x:Name="descricaoItem"/>
+            </StackLayout>
+        </ContentPage>
+        <ContentPage Title="Opções">
+            <StackLayout Margin="10">
+                <Entry IsEnabled="False"
+                       x:Name="nomeItemOpcao"/>
+                <Entry IsEnabled="False"
+                       x:Name="descricaoItemOpcao"/>
+                <Button Text="Editar"
+                        Clicked="Button_Clicked"/>
+                <Button Text="Confirmar"
+                        BackgroundColor="Green"
+                        x:Name="btnConfirmar"/>
+                <Button Text="Excluir"
+                        Clicked="Button_Clicked_1"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        x:Name="btnExcluir"/>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
