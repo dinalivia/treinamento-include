@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage"
+             Title="">
+    <!--Para adicionar um titulo a pagina, basta colocar o seguinte codigo depois de x:Class (acima)
+        codigo para ser adicionado, Title="NOME DA SUA PAGINA" -->
+    <!--Elemento geral de layout, NUNCA ESQUECER DE COLOCAR ELE.-->
+    <StackLayout Margin="10">
+        <!--Elemento de texto-->
+        <Label Text="Oi mundo!"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontSize="Large"/>
+        <!--Campo de texto-->
+        <Entry Placeholder="Nome"
+               VerticalOptions="Center"/>
+        
+        <Switch
+            HorizontalOptions="Center"/>
+        <!--Evento CLICKED possui um metodo que esta sendo chamado no code behind-->
+        <Button Text="Ok"
+                BackgroundColor="Red"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+    
+    <!--Lembra 
+     - Qualquer evento vai ser chamado no code behind,
+     - perceber que cada elemento possui algumas opcoes opcoes, como texto, cor de fonte etc  -->
+
+</ContentPage>
