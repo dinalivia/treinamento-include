@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppInclude.Views.TaskPage"
+            Title="Tarefas">
+    <TabbedPage.Children>
+        <ContentPage Title="To Do" Padding="10">
+            <ContentPage.ToolbarItems>
+                <ToolbarItem Text="Adicionar" Command="{Binding AdicionarCommand}"/>
+            </ContentPage.ToolbarItems>
+            <ListView          
+                ItemsSource="{Binding Itens}"
+                RowHeight="100"
+                SeparatorColor="Black">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="10">
+                                <Label Text="{Binding Nome}"
+                                       FontSize="Large"/>
+                                <Button Text="Done"
+                                        Command="{Binding DoneCommand}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentPage>
+        
+        <ContentPage Title="Done">
+            
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
